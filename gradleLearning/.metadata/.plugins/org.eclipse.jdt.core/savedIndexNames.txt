@@ -1,0 +1,13 @@
+INDEX VERSION 1.131+H:\WebDevelopmentClass\gradleLearning\.metadata\.plugins\org.eclipse.jdt.core
+3433265501.index
+3635213469.index
+2278535295.index
+4140928472.index
+1986482762.index
+1568929971.index
+1865895171.index
+3013726897.index
+2664636389.index
+3585787484.index
+3038323672.index
+2447504905.index
