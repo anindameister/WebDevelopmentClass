@@ -3,16 +3,56 @@ plugins {
 
 }
 
-apply plugin: 'war'
 
 group 'org.maulik'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.8.RELEASE'
+
 }
 
+task hello {
+    doLast {
+        println 'Hello'
+    }
+}
+
+task world(dependsOn: hello) {
+    doLast {
+        println 'World'
+    }
+}
+
+
+println 'This is executed during the configuration phase.'
+
+task configured {
+    println 'This (configured) is also executed during the configuration phase.'
+}
+
+task testWrite {
+    doLast {
+        println 'This (testWrite) is executed during the execution phase.'
+    }
+}
+
+task testWriteBoth {
+    doFirst {
+        println 'This (testWriteBoth) is executed first during the execution phase.'
+    }
+    doLast {
+        println 'This (testWriteBoth) is executed last during the execution phase.'
+    }
+    println 'This (testWriteBoth) is executed during the configuration phase as well.'
+}
