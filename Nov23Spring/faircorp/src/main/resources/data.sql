@@ -1,0 +1,1 @@
+insert into LEARNING_DATABASE values(17071988,'AnindaMaulik');
